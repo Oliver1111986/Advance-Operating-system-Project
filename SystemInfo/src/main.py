@@ -8,6 +8,10 @@ import os
 import sys
 import time
 
+# Add current directory to Python path for module imports
+# This fixes the import issue when running from SystemInfo/src/main.py
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 def clear_screen():
     """Clears the terminal screen (MAIN-MENU-04)"""
     os.system('cls' if os.name == 'nt' else 'clear')
